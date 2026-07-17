@@ -1,0 +1,192 @@
+/*==========================================
+TABLETS (992px)
+==========================================*/
+
+@media (max-width:992px){
+
+    h1{
+        font-size:2.8rem;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+
+    .hero-container,
+    .about-grid,
+    .contact-wrapper{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-image{
+        order:-1;
+    }
+
+    .about-features{
+        text-align:left;
+    }
+
+    .hero-buttons,
+    .contact-buttons{
+        justify-content:center;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+        gap:30px;
+    }
+
+}
+
+/*==========================================
+MOBILE (768px)
+==========================================*/
+
+@media (max-width:768px){
+
+    .section{
+        padding:70px 0;
+    }
+
+    .top-bar{
+        display:none;
+    }
+
+    .navbar{
+        height:70px;
+    }
+
+    .nav-links{
+
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#fff;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:25px 0;
+
+        display:none;
+
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    .nav-buttons{
+        display:none;
+    }
+
+    h1{
+        font-size:2.3rem;
+    }
+
+    h2{
+        font-size:1.8rem;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:70px 0;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-features{
+        justify-content:center;
+    }
+
+    .product-grid,
+    .why-grid,
+    .industry-grid,
+    .process-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .contact-form{
+        padding:25px;
+    }
+
+}
+
+/*==========================================
+SMALL MOBILE (480px)
+==========================================*/
+
+@media (max-width:480px){
+
+    .container{
+        width:92%;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.6rem;
+    }
+
+    p{
+        font-size:15px;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .call-btn,
+    .whatsapp-btn{
+        width:100%;
+    }
+
+    .hero-buttons{
+        width:100%;
+    }
+
+    .feature{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .contact-item{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .floating-whatsapp{
+        width:55px;
+        height:55px;
+        font-size:26px;
+        right:18px;
+        bottom:18px;
+    }
+
+    #backToTop{
+        width:50px;
+        height:50px;
+        right:18px;
+        bottom:90px;
+    }
+
+}

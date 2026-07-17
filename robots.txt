@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sharan876224.github.io/Green-Harvest-Mysore/sitemap.xml
