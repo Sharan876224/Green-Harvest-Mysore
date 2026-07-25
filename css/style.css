@@ -736,21 +736,37 @@ BACK TO TOP
 ==========================================*/
 
 #backToTop{
-    position:fixed;
-    right:25px;
-    bottom:100px;
-    width:55px;
-    height:55px;
-    border:none;
-    border-radius:50%;
-    background:var(--primary);
-    color:#fff;
-    font-size:20px;
-    cursor:pointer;
-    display:none;
-    box-shadow:var(--shadow);
-    z-index:999;
-    transition:var(--transition);
+    position: fixed;
+    right: 25px;
+    bottom: 100px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--primary);
+    color: #fff;
+
+    cursor: pointer;
+
+    box-shadow: var(--shadow);
+
+    z-index: 999;
+
+    transition: .3s ease;
+
+    display: none;
+}
+
+#backToTop i{
+    font-size: 20px;
+    line-height: 1;
 }
 
 #backToTop:hover{
