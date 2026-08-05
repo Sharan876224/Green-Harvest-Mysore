@@ -55,55 +55,28 @@ window.addEventListener("scroll", () => {
 
 const backToTop = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
+if (backToTop) {
 
-    if (window.pageYOffset > 400) {
+    window.addEventListener("scroll", () => {
 
-        backToTop.style.display = "flex";
-
-    } else {
-
-        backToTop.style.display = "none";
-
-    }
-
-});
-
-backToTop.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top: 0,
-        behavior: "smooth"
+        if (window.pageYOffset > 400) {
+            backToTop.style.display = "flex";
+        } else {
+            backToTop.style.display = "none";
+        }
 
     });
 
-});
+    backToTop.addEventListener("click", () => {
 
-
-// ================================
-// Smooth Scrolling
-// ================================
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-    anchor.addEventListener("click", function (e) {
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if (!target) return;
-
-        e.preventDefault();
-
-        target.scrollIntoView({
-
+        window.scrollTo({
+            top: 0,
             behavior: "smooth"
-
         });
 
     });
 
-});
+}
 
 
 // ================================
@@ -217,3 +190,42 @@ if (year) {
 }
 
 console.log("✅ Green Harvest Mysore Website Loaded Successfully");
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".lightbox-close");
+
+    if (!lightbox || !lightboxImg || !closeBtn) return;
+
+    document.querySelectorAll(".catalog-card img").forEach(img => {
+
+        img.onclick = function () {
+
+            lightbox.style.display = "flex";
+            lightboxImg.src = this.src;
+            lightboxImg.alt = this.alt;
+
+        };
+
+    });
+
+    closeBtn.onclick = () => {
+
+        lightbox.style.display = "none";
+
+    };
+
+    lightbox.onclick = e => {
+
+        if (e.target === lightbox) {
+
+            lightbox.style.display = "none";
+
+        }
+
+    };
+
+});
